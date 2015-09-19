@@ -1,0 +1,137 @@
+/* global styles */
+
+html, body {
+  height: 100%;
+  /* reseting browser styles */
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #E8DD95;
+}
+
+/* set default box-sizing for all elements - inherited from html */
+* {
+  box-sizing: inherit;
+}
+
+
+/* optional wrapper */ 
+.wrapper {
+  text-align: center;
+  height: 100%;
+  padding: 10px;
+}
+
+/* utilities */
+.u-btn {
+  background-color: #B283E8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+.u-btn:hover {
+  background-color: #7F50B5;
+}
+
+.u-btn:active, .u-btn:focus {
+  outline: none;
+  background-color: #7F50B5;
+}
+
+.u-btn-play {
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1em;
+}
+
+.u-btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  display: none;
+}
+
+
+/* box styles */
+.main__box {
+  background-color: #FFA7A4;
+  padding-top: 20px;
+  position: relative;
+}
+  
+.main__box-copy {
+  color: #444;
+  padding: 0 15px;
+}
+
+.main__box-col {
+  text-align: justify;
+}
+
+.main__box-footer {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+
+/*
+*   MEDIA QUERIES
+*/
+
+/* for desktop only */
+@media screen and ( min-width: 769px ) {
+  /* global styles */
+  .wrapper:before {
+    content: '';
+    width: 0px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* utilities */
+  .u-btn-close {
+    display: block;
+  }
+
+  .u-btn-play {
+    margin-top: 10px;
+  }
+  
+  /* box styles */
+  .main__box {
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .main__box-copy {
+    max-height: 84%;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+  }
+  
+  .main__box-col {
+    margin: 0;
+    padding: 0 3px;
+    display: inline-block;
+    max-width: 49.5%;
+    vertical-align: top;
+  }
+}
